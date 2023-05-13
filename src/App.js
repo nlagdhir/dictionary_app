@@ -2,7 +2,6 @@ import axios from "axios";
 import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
-import Loading from "./components/Loading";
 import Result from "./components/Result";
 import { ImWarning } from "react-icons/im";
 
@@ -11,7 +10,7 @@ function App() {
   const [searchData, setSearchData] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-
+// search handle
   const handleSearch = async () => {
     if (searchValue) {
       try {
@@ -35,7 +34,7 @@ function App() {
     }
   };
 
-
+//error message
 
   let errorElm;
   errorElm = (
